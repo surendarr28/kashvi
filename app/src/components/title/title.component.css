@@ -1,0 +1,37 @@
+.title-cont {
+    font-family: 'Gamja Flower', cursive;
+    /* font-family: 'Pacifico', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Bree Serif', serif;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Merienda', cursive;
+    font-family: 'Patrick Hand', cursive; */
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    color: #ed3c63;
+    margin-bottom: 10px;
+    position: relative;
+    transition: 2s all;
+}
+
+.heart-img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.heart-img, path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: brush 5s linear alternate infinite;
+}
+
+@keyframes brush {
+    from {
+        stroke-dashoffset: 1000;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+}

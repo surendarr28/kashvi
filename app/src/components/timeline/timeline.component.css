@@ -1,0 +1,56 @@
+.timeline-cal {
+    text-align: center; 
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 30px;
+    cursor: pointer;
+    /* border: 0px dashed #9E9E9E; */
+    margin: 5px;
+    white-space: nowrap;
+    /* border-radius: 30%; */
+    opacity: 1;
+    transition: .5s all;
+    display: inline-block;
+    height: 35px;
+    border-bottom: 1px solid #E91E63;
+}
+
+.timeline-cal:hover {
+    z-index: 200000;
+    opacity: 1;
+    transition: .5s all;
+}
+
+
+.timeline-block {
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+}
+
+.timeline-center {
+    opacity: 1;
+}
+
+.icon-size {
+    font-size: 20px;
+}
+
+.slick-prev {
+ top:-20%;
+ left: 45%;
+ transform: rotate(90deg);
+}
+
+.slick-next {
+top: 105%;
+left: 45%;
+right: 0 !important;
+transform: rotate(90deg);
+}
+
+.slick-next:before, .slick-prev:before {
+    color: #E91E63;
+}
