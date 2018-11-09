@@ -8,12 +8,20 @@
     font-family: 'Merienda', cursive;
     font-family: 'Patrick Hand', cursive; */
     display: block;
-    text-align: center;
-    font-size: 50px;
-    color: #ed3c63;
-    margin-bottom: 10px;
-    position: relative;
+    font-size: 1.5em;
+    color: #ffffff;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     transition: 2s all;
+    z-index: 1;
+    background: #ed3c63;
+    padding: 0 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+
 }
 
 .heart-img {
