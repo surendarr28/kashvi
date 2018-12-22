@@ -29,6 +29,8 @@ import k21 from './images/k21.jpg'
 import k22 from './images/k22.jpg'
 let timer;
 
+let timer2;
+
 class App extends Component {
 
   componentDidMount = () => {
@@ -53,25 +55,36 @@ class App extends Component {
     //   // dollChange();
     // });
 
-    this.firstPanel([
-      "https://res.cloudinary.com/duxkaxgab/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1545497784/kashvi/k4.jpg", 
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498490/kashvi/k8.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k21.jpg", 
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k8.jpg", 
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k10.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k12.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k13.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k14.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k15.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k16.jpg", 
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k17.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k18.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k19.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k20.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k22.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k5.jpg",
-      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k6.jpg"
-    ]);
+    // this.firstPanel([
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1545497784/kashvi/k4.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498490/kashvi/k8.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k21.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k8.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k10.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k12.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k13.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k14.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k15.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k16.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k17.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k18.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k19.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k20.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k22.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k5.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k6.jpg"
+    // ]);
+    // this.secondPanel([
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498490/kashvi/k12.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k13.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k14.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k15.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k16.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k17.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k18.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k19.jpg",
+    //   "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k20.jpg"
+    // ]);
     // this.secondPanel([
     //   k12, k13, k14,k15, k16, k17,k18,k19,k20,k21,k22
     // ]);
@@ -99,13 +112,17 @@ class App extends Component {
   secondPanel(imageloop) {
     let i = -1;
 
-    setInterval(e => {
+    if (timer2) {
+      clearInterval(timer2);
+    }
+
+    timer2 = setInterval(e => {
       if (i == imageloop.length - 1) {
         i = -1
       }
       i++;
       let k_img = document.getElementById("kashvi_img2");
-      k_img.src = imageloop[i];
+      k_img.style.backgroundImage = `url(${imageloop[i]})`;
     }, 2000)
   }
 
@@ -129,13 +146,52 @@ class App extends Component {
 
   render() {
 
+    let images = [
+      "https://res.cloudinary.com/duxkaxgab/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1545497784/kashvi/k4.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498490/kashvi/k8.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k21.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k8.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k10.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k12.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k13.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k14.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k15.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k16.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k17.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k18.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k19.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k20.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k22.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k5.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k6.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498490/kashvi/k12.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k13.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k14.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k15.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k16.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k17.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k18.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k19.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k20.jpg"
+    ]
+
     return (
       <div>
-        <iframe src={"/mp31"} allow={'autoplay'} style={{display:'none'}}></iframe>
+
+        {images.map((item, index) => {
+          return (
+            <div className="background_img" key={index} style={{ backgroundImage: `url(${item})` }}>
+              <Title title="Kashvi Sri" slogan={`Month 1`}></Title>
+            </div>
+          )
+        })}
+       
+
+        <iframe src={"/mp31"} allow={'autoplay'} style={{ display: 'none' }}></iframe>
         {/* <audio loop={true} autoPlay={true} style={{display:'none'}} controls={true}>
           <source src={"/mp31"} type="audio/mp3"></source>
         </audio> */}
-          {/* <div className="box box1" id="box1">
+        {/* <div className="box box1" id="box1">
           <img src={mainImage} />
         </div>
         <div className="box box2" id="box2">
@@ -146,19 +202,14 @@ class App extends Component {
         </div>
         <div className="box box4" id="box4"></div>
         <div className="box box5" id="box5"></div> */}
-          <div className="center-focus" id="doll">
-            {/* <img src={mainImage} /> */}
-          </div>
 
-          <Timer type="mirrage" position="top-left"></Timer>
-          <Timer type="birth" position="bottom-right"></Timer>
-          <Timer type="birthinit" position="top-right"></Timer>
+        <Timer type="mirrage" position="top-left"></Timer>
+        <Timer type="birth" position="bottom-right"></Timer>
+        <Timer type="birthinit" position="top-right"></Timer>
 
-          {/* <Timeline></Timeline> */}
-          <div>
-            <Title></Title>
-            {/* <img className={'imgss'} src={k1}></img> */}
-            {/* <div className="monts_list transation_all">
+        {/* <Timeline></Timeline> */}
+        {/* <img className={'imgss'} src={k1}></img> */}
+        {/* <div className="monts_list transation_all">
             <div onClick={e => this.updatePhotot([
               k7, k7, k9, k8, k10
             ])}>
@@ -172,17 +223,15 @@ class App extends Component {
               k4, k5, k6
             ])}> <i className="fas fa-heart transation_all"></i> <label className="transation_all">3</label></div>
           </div> */}
-          </div>
-          {/* <div className="image_con1">
+        {/* <div className="image_con1">
           <img src={k1} id="kashvi_img2"></img>
         </div>
         <div className="image_con2">
           <img src={k1} id="kashvi_img3"></img>
         </div> */}
-        <div className="background_img" id="kashvi_img" style={{backgroundImage: `url(https://res.cloudinary.com/duxkaxgab/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1545497784/kashvi/k4.jpg)`}}></div>
       </div>
-        );
-      }
-    }
-    
-    export default connect()(App);
+    );
+  }
+}
+
+export default connect()(App);

@@ -1,5 +1,5 @@
 .timer {
-    position: absolute;
+    position: fixed;
     font-family: 'Gamja Flower', cursive;
     padding: 10px;
     text-align: center;
