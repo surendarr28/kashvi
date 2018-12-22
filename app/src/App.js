@@ -53,9 +53,9 @@ class App extends Component {
     //   // dollChange();
     // });
 
-    // this.firstPanel([
-    //   k7, k7, k9, k8, k10, k12, k13, k14, k15, k16, k17, k18, k19, k20, k21, k22, k4, k5, k6
-    // ]);
+    this.firstPanel([
+      k7, k7, k9, k8, k10, k12, k13, k14, k15, k16, k17, k18, k19, k20, k21, k22, k4, k5, k6
+    ]);
     // this.secondPanel([
     //   k12, k13, k14,k15, k16, k17,k18,k19,k20,k21,k22
     // ]);
@@ -76,8 +76,8 @@ class App extends Component {
       }
       i++;
       let k_img = document.getElementById("kashvi_img");
-      k_img.src = imageloop[i];
-    }, 500)
+      k_img.style.backgroundImage = `url(${imageloop[i]})`;
+    }, 2000)
   }
 
   secondPanel(imageloop) {
@@ -90,7 +90,7 @@ class App extends Component {
       i++;
       let k_img = document.getElementById("kashvi_img2");
       k_img.src = imageloop[i];
-    }, 900)
+    }, 2000)
   }
 
   thirdPanel(imageloop) {
@@ -163,7 +163,7 @@ class App extends Component {
         <div className="image_con2">
           <img src={k1} id="kashvi_img3"></img>
         </div> */}
-        <div className="background_img" style={{backgroundImage: `url(${k7})`}}></div>
+        <div className="background_img" id="kashvi_img" style={{backgroundImage: `url(${k7})`}}></div>
       </div>
         );
       }

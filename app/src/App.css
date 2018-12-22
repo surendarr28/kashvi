@@ -86,5 +86,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  transition: 1s all;
 }
 
