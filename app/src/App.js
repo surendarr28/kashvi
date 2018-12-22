@@ -54,7 +54,23 @@ class App extends Component {
     // });
 
     this.firstPanel([
-      k7, k7, k9, k8, k10, k12, k13, k14, k15, k16, k17, k18, k19, k20, k21, k22, k4, k5, k6
+      "https://res.cloudinary.com/duxkaxgab/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1545497784/kashvi/k4.jpg", 
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498490/kashvi/k8.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k21.jpg", 
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k8.jpg", 
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k10.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k12.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k13.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k14.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k15.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k16.jpg", 
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k17.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k18.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k19.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k20.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k22.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k5.jpg",
+      "https://res.cloudinary.com/duxkaxgab/image/upload/v1545498508/kashvi/k6.jpg"
     ]);
     // this.secondPanel([
     //   k12, k13, k14,k15, k16, k17,k18,k19,k20,k21,k22
@@ -163,7 +179,7 @@ class App extends Component {
         <div className="image_con2">
           <img src={k1} id="kashvi_img3"></img>
         </div> */}
-        <div className="background_img" id="kashvi_img" style={{backgroundImage: `url(${k7})`}}></div>
+        <div className="background_img" id="kashvi_img" style={{backgroundImage: `url(https://res.cloudinary.com/duxkaxgab/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1545497784/kashvi/k4.jpg)`}}></div>
       </div>
         );
       }
