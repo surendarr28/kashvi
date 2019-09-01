@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Kiddiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Chilanka|Montserrat|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .header-nav {
+            background-image: url("./billboard1.jpg");
+            background-size: cover;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .img-block {
+            text-align: center;
+            padding: 2rem;
+            display: block;
+            background: #79d8b0;
+        }
+
+        .img-block img {
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 0px 9px 24px -6px #000;
+        }
+
+        .heading-logo {
+
+            font-family: 'Open Sans', sans-serif;
+            /* font-size: 2em; */
+            color: #fef4c6;
+            background: #79d8b0;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%);
+            padding: .5em 2em;
+            text-align: center;
+        }
+
+        .first-color {
+            background: #fef4c6;
+        }
+
+        .logo-title {
+            font-size: 4em;
+            font-weight: bolder;
+        }
+
+        .slogan {
+            font-size: 1.3em;
+            color: #39627d;
+            /* white-space: nowrap; */
+            padding-bottom: .5em;
+
+        }
+
+        .block_title {
+            font-size: 2em;
+            color: #2f2f2f;
+        }
+
+        .list-style {
+            text-align: center;
+            list-style-position: inside;
+            font-size: 1rem;
+            color: #2f2f2f;
+            list-style: none;
+            padding: 0;
+
+        }
+    </style>
+    <script>
+        function onLoad() {
+            document.getElementsByTagName("body")[0].style.height = `${window.innerHeight}px`;
+        }
+    </script>
+</head>
+
+<body onload="onLoad()">
+    <div class="header-nav">
+        <div class="heading-logo">
+            <div class="logo-title">Smart Kiddiz</div>
+            <div class="slogan">Changes call for Invoation, and Innovation leads to progress</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="img-block">
+            <div class="block_title">Dashboard</div>
+            <div class="block_points">
+                <ul class="list-style ">
+                    <li>Time table swith between the weeks</li>
+                    <li>Teacher Information in time table</li>
+                    <li>Attendance Percentage per month</li>
+                    <li>Handy menu in billboard</li>
+                    <li>***</li>
+                </ul>
+            </div>
+        </div>
+        <div class="img-block first-color">
+            <div class="block_title">Homework</div>
+            <div class="block_points">
+                <ul class="list-style ">
+                    <li>Online Diary, maintains record of all the home works given.</li>
+                    <li>Home work information will be updated accurately by Staff.</li>
+                    <li>Parents receive Home Work Notification.</li>
+                    <li>Parents have option to like and unlike Home Work.</li>
+                    <li>Staff gives feedback for Home Work using Emoji.</li>
+                    <li>Happy Embarrassed Surprised</li>
+                    <li>Emoji makes student happy and encourages them in doing their home work well.</li>
+                    <li>Complaint Box, where staff updates complaint regarding the students home work mistakes.</li>
+                    <li>***</li>
+                </ul>
+            </div>
+        </div>
+        <div class="img-block">
+            <div class="block_title">Attendance</div>
+            <div class="block_points">
+                <ul class="list-style ">
+                    <li>List of Students Present in Particular class and Section.</li>
+                    <li>Default Attendance for Present Students.</li>
+                    <li>Selection needed only for absentee’s.</li>
+                    <li>Absentee’s names are highlighted.</li>
+                    <li>Total number of Absentee’s displayed.</li>
+                    <li>If no absentee’s, direct click on save finishes attendance process.</li>
+                    <li>Final Step Save Attendance marked.</li>
+                    <li>***</li>
+                </ul>
+            </div>
+        </div>
+        <div class="img-block first-color">
+                <div class="block_title">Notification</div>
+                <div class="block_points">
+                    <ul class="list-style ">
+                        <li>Parents receive a notification after students 1st attendance.</li>
+                        <li>Complaints from staff.</li>
+                        <li>Feedback from staff.</li>
+                        <li>Reminder on School fees Due date.</li>
+                        <li>Leave Confirmation.</li>
+                        <li>Emergency Flash news.</li>
+                        <li>School Circular Information.</li>
+                        <li>***</li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
